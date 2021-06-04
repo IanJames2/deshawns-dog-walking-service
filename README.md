@@ -22,6 +22,8 @@ Now that you've seen a few quick walkthroughs of how to use the Developer Tools 
 
 Visit the Debug JavaScript site and follow the 7 step demo on using the Developer Tools to find and fix issues in JavaScript.
 
+https://developer.chrome.com/docs/devtools/javascript/#reproduce
+
 Fixing DeShawn's Application
 DeShawn hired some consulting agency from overseas to build a simple application that displayed the following information.
 
