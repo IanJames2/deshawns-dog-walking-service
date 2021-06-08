@@ -1,5 +1,26 @@
 import { getProducts } from "./database.js"
 
+document.addEventListener("click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target
+        if (itemClicked.id.startsWith("product")) {
+            const [, productId] = itemClicked.id.split("--")
+
+            const prodIDint = parseInt(productId)
+
+            const products = getProducts()
+
+            let count = 0
+            for (const product of products) {
+                if (product.id === prodIDint) {
+                    count++
+                }
+            }
+            window.alert(` ${clickEvent.target.innerText} costs ${prodIDint.price} `)
+        }
+    }
+)
+
 const products = getProducts()
 
 export const Products = () => {
@@ -13,18 +34,3 @@ export const Products = () => {
 
     return html
 }
-
-/**
-// Function whose responsibility is to find the employee for an order
-const findemployee = (order, allEmployees) => {
-    let orderEmployee = null
-
-    for (const employee in allEmployees) {
-        if (employee.id === order.employeeId) {
-            orderEmployee = employee
-        }
-    }
-
-    return orderEmployee
-}
- */

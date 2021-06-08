@@ -135,5 +135,6 @@ export const getEmployees = () => {
 
 export const getOrders = () => {
     return database.orders.map(order => ({...order}))
+
 }
 
