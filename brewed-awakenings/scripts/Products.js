@@ -4,22 +4,21 @@ document.addEventListener("click",
     (clickEvent) => {
         const itemClicked = clickEvent.target
         if (itemClicked.id.startsWith("product")) {
-            const [, productId] = itemClicked.id.split("--")
-
+            console.log("I clicked!", clickEvent)
+            const [, productId] = itemClicked.id.split("--") // ["product " , "2"]            
             const prodIDint = parseInt(productId)
-
-            const products = getProducts()
-
-            let count = 0
+            let prod = ""
             for (const product of products) {
                 if (product.id === prodIDint) {
-                    count++
+                    prod = product
+                    // return prod
                 }
             }
-            window.alert(` ${clickEvent.target.innerText} costs ${prodIDint.price} `)
+            window.alert(` ${clickEvent.target.innerText} costs $${prod.price} `)
         }
     }
 )
+
 
 const products = getProducts()
 
@@ -27,10 +26,8 @@ export const Products = () => {
     let html = "<ul>"
 
     for (const product of products) {
-        html += `<li id="product--${product}">${product.name}</li>`
+        html += `<li id="product--${product.id}">${product.name}</li>`
     }
-
-    html += "</ul>"
 
     return html
 }
