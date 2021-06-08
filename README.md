@@ -147,13 +147,6 @@ const itemClicked = clickEvent.target
 Click on a walker.
 Use the step over icon to run each line of code and examine what the values of the variables are.
 
-Viewing Product Prices on Click
-Using code from the last project as an example, attempt adding a click event listener that presents an alert box showing the price of a product when it is clicked by the user.
-
-
-
-If you find yourself creeping up on 30 minutes of trying to get the code to work, it's time to go to a peer, or an instructor for assistance.
-
 As always, you can peek at most of the solution.
 
 Displaying Number of Products Sold
@@ -238,3 +231,37 @@ Another reminder from the instruction team. This is NOT A TEST. We are not looki
 What we are looking for is effort, critical thinking about the concepts, creative thinking to bind the concepts together for a solution, and collaboration with your teammates and instruction team.
 
 If you only get 50% of it complete, but display the above Core Skills and can demonstrate understanding of the fundamental code concepts, then you are learning and growing - which is what we care about.
+
+Entity Relationship Diagram for Brewed Awakenings
+Look in the database.js module and identify the resources, the fields/attributes on each resource, and the relationship between the three resources used by the application.
+
+Products
+Employees
+Orders
+Use dbdiagram to visualize your database.
+
+There should be two 1 -> many relationships visualized in your ERD. They both will converge on a single entity.
+
+This is a great opportunity to discuss these concepts with your teammates and your instruction team, because if you don't understand your data structure, data types, and relationships, then it simply doesn't matter how much knowledge you have of a programming language.
+
+All programming languages are written with one goal in mind - how to manipulate and represent data that is stored in a database.
+
+It is crucial that you spend time now to get the basic vocabulary and understanding of these concepts.
+
+Viewing Product Prices on Click
+Using code from the last project as an example, attempt adding a click event listener that presents an alert box showing the price of a product when it is clicked by the user.
+
+
+
+If you find yourself creeping up on 30 minutes of trying to get the code to work, it's time to go to a peer, or an instructor for assistance.
+
+As always, you can peek at most of the solution.
+
+Displaying Number of Products Sold
+Using code from the last project as an example, attempt adding a click event listener that presents an alert box showing how many products an employee has sold when their name is clicked.
+
+
+
+If you find yourself creeping up on 30 minutes of trying to get the code to work, it's time to go to a peer, or an instructor for assistance.
+
+As always, you can peek at most of the solution.
