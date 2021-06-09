@@ -5,18 +5,19 @@ document.addEventListener("click",
         const itemClicked = clickEvent.target
         if (itemClicked.id.startsWith("employee")) {
             console.log("I clicked!", clickEvent)
-            const [, employeeId] = itemClicked.id.split("--")
+            const [, employeeId] = itemClicked.id.split("--") // ["employee", "2"]
             const orders = getOrders()
+            let employeeOrders = []
 
-            for (const employee of employees) {
-                    const employeeOrders = orders.filter(order => {
-                            if (order.employeeId === employee.id) {
-                                return true
-                            }
-                        }
-                    )
+
+            employeeOrders = orders.filter(order => {
+                    if (order.employeeId === parseInt(employeeId)) {
+                        return true
+                    }
                 }
-            window.alert(` ${clickEvent.target.innerText} sold ${employees.employeeOrders} products `)
+            )
+
+            window.alert(` ${clickEvent.target.innerText} sold ${employeeOrders.length} products `)
             }
         }
     )
